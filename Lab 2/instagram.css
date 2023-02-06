@@ -1,0 +1,20 @@
+body{
+	background: #fafafa;
+	font-size: 14px;
+	height: 100vh;
+	margin: 0;
+}
+
+.main-container{
+	display:flex;
+}
+
+.left .right{
+	height: 700px;
+	width: 430px;
+	background-image: url(/rsrc.php/v3/y4/r/ItTndlZM2n2.png);
+}
+
+input{
+	
+}
