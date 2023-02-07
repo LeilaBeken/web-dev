@@ -14,7 +14,6 @@ body{
 }
 .row{
 	display: flex;
-	flex-wrap: wrap;
 }
 .justify-content-between{
 	justify-content: space-between;
@@ -31,7 +30,6 @@ body{
 }
 .content-left h2{
 	font-size: 28px;
-	line-height: 32px;
 	font-weight: 500;
 	margin-bottom: 40px;
 }
@@ -46,8 +44,6 @@ body{
 	background: #fff;
 	border-radius: 5px;
 	padding: 15px;
-	-webkit-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
-	-moz-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
 	box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
 	margin-bottom: 30px;
 }
@@ -74,15 +70,14 @@ body{
 	margin-bottom: 20px;
 	text-transform: capitalize;
 }
-.login a{
+.login p{
 	display: block;
 }
-.create-btn a{
+.create-btn p{
 	display: inline-block;
 	margin-top: 20px;
 	padding: 0 17px;
 	background: #4cd137;
-	transition: .3s;
 }
 .create-btn a:hover{
 	background: #44bd32;
@@ -91,10 +86,6 @@ body{
 	font-size: 14px;
 	line-height: 19px;
 	color:#1877f2;
-}
-.forgot a:hover,
-.content-right p a:hover{
-	text-decoration: underline;
 }
 .content-right p a{
 	color: #1c1e21;
