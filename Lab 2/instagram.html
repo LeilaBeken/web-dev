@@ -1,20 +1,90 @@
-<!DOCTYPE html><html lang="en">
-<head>    <meta charset="UTF-8">
-    <title>Log in</title>    <link rel="stylesheet" href="style.css"/>
-</head><body>
-<img src="Inst.png">    <div class="login">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzld_xZ8ywiIt9BR9kjE6FZfdaLVc6fHQNbQ&usqp=CAU"         alt="instagram" width="174" height="100">
-    <br>    <input class="username" type="text" placeholder="Phone number, username, or email" required/>
-    <br>    <input class="password" type="password" placeholder="Password"/>
-    <button id="enter" type="submit">Log in</button>
-        <div class="partition">            <div class="left"></div>
-    <div class="center">OR</div>            <div class="right"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="instagram.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" type="image/png">
+</head>
+<body>
+<img id="girl" src="./Inst.png">
+<div class="main-container">
+
+    <div class="header">
+        <div class="top">
+            <i class="logo"></i>
+            <div class="form">
+                <div class="input_field">
+                    <input type="text" placeholder="Phone number, username, or email" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><a href="#">Log In</a></div>
+            </div>
+            <div class="or">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+            <div class="dif">
+                <div class="fb">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEUVfcP////0+PwAdsEAc78Ae8Pz9/sthcbN4PAAeMHd6/b7/f75+/6Cs9t3qtYAcr/W5vMVgMVVmc9dn9Kew+Lo8vlvp9WVvuDE2u1GkcuLt9x9r9k9jcpkotNBkcwuh8iuzeeoyeW40+oAaryV0Y4SAAAETklEQVR4nO3daXuiMBSGYTFEDGBZFBH3Ov//P45t3aZWczAN4WTe57s19wUSy2IGge8NXA/Aev+dMB3yL30szCdNoQT3VNEs4x+FeZkpOfAhqbIyvhfWmR+8r2Q2+y58C10P6pcLJ/8Ka9+AR+LsVphnrsdjoSy+ETY+fQbPqfIq9HITnjfip3ClXA/GSqq+CNc+7qTHKaM8C4d+AgeDKDkJR/5NFadS34VyCCH3IOQfhPyDkH8Q8g9C/kHIPwj5ByH/OAjlbe1f3WehUkLIwW5bTjebzXQ6LZvtelcUR7ISoRBKUa4E9lZ4xBWb2SIeBXclw6qK88V+Vr+VkdbYT6EK1fxQ3dt+SHuqvo9CIeZjku6jN35CEc2GZB9DoYjeW/D4CaWqk3ZAZkLR0I4ubIVZ3drHSihV/gKQkVDt2u+hrIRq/cOXF5+EctdmDmQolMWLW5CNMIx1EObC7PAykIdQvb0OZCGUUdtvatyE4cIAyEGopiZADkLx+nGUh1DNjYAMhAZTIQ+hNPsUMhCaHUg5CAtDYO+FaqITcBeG9BOjTIXKFNh3oelk2H+h2HsvpE/3abXY18vJavKtte493AolkZccNsXXBcO79O/hUii3NOC7FK8/K+FUqFYU32hrNDS3wplO9zGwyOxxJadCQflS2hg+j+VUGBKuVOxNx+V2LyVcqihM38TtsVQvHBsPy6mw0F+sWBo/FelWqD9RujV+aNCpMNICA/NR9Vw4Mn84uefC2PttmHsvNJ8sILQbhBCSgtBqEEJICkKrQQghKQitBiGEpCC0GoQQkrIuVOHDMv0vNI//PH75Z+6Fal7Fj9MKh09e/FEVuRca39b1PP2omQsr/Vl/5kLCkYi58CB8F9bu7xiyLNTe1cZeWOovETMX7vQj4C1M9Aca5kLCdMhcSPlizlu4934vpdxPxFs4915ImA55CxPCdMhbOKTc1sdaGFPuCWMtXBAmC95CynTIW0i6vZa1cEO5vZa1kLT2D2dhqj9ZylxYke5y5yyk3UDMWUg4lchcOPN+L514L6T878RbuOuHcJU8WQ9Vi3j24or2WJvLq9xypxWOSYfL5+/iUujHdfxnQQghKQitBiGEpCC0GoQQkoLQahBCSApCq0EIISkIrQYhhKQgtBqEEJKC0GoQQkgKQqtBCCEpCK0GIYSkILQahBCSgtBqEEJICkKrQQghKQitBiGEpCC0GoQQkoLQahBCSApCq0EIISkIrQYhhLTSk3BovKRp+zoRRslJGKy7J3YhlGVwFq6MV95tXRdCVV+EY/NlW9vWhTCLL8JfWFy4bR0I1TS4CrvfiB0Is+pGGCy7njDsC8P34FYYzDsmWheG5184uqyGUmedfhYtC2U2O/+d63oveZOpzpBWf4FHqqy8rvJyu6JNPmkKJbqpCNLnJYvstb+simZ5u4rNtzV70ic/P/W7JdpGL/7l9F+SflUi7kHIv7+duWtSdmYvUAAAAABJRU5ErkJggg=="
+                         alt="facebook">
+                    <p>Log in with Facebook</p>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
         </div>
-        <div class="buttom" style="display: flex">    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEU7WZj////e4uwoTZLr7fQvUpUtUJT7/P04WJnQ1uT4+fy0vdM8Wpk0VJXh5e4hSJB4irTHzt9KZZ+PnsCgrMlxhLFQaqLy9PiVosKlscxkeKmHl7yrtc6DlLpqfqxXbqTCydzV2+dDYZ4YRI/fiYA0AAAEX0lEQVR4nO3d23qiMBiFYTCAQRs24t5Orfb+73G0jk9tp5UlEMKfru9oTobhbdkNgRCEH0XZyI+y6EYVXP9QFjpRvpToovwiLGfKBD5l1Ky8FVa5dr1Knafz6kNYKNerYyVVXIWVn8ATsboI09z1mlgrT9+FM//2wWt6dhaWvm6j51R5EhZ+nSY+Z4qT0N9t9JwOgyhxvRJWS6Ig83k3PO2IWTDyXDiiUHoUyo9C+VEoPwrlR6H8KJQfhfKjUH4Uuk1rY0wcJ+fiU+ac1jp44AbocIUmVrlZbovder553mw28/m62v0pFi/b/exoLsOgsamnDlOoY/X0Mn+NVuH3TVar6FBOn6vFspY4RGGslvPD5Afcl6a1t7MHJ9RKzzNMJ1Ko831Zz5Ir1GqfPuSTJkyOrw/6ZAm12oFHF6FCYx7bAcUJ4/1P5z5PhJcHXzwWql1DoBShqpoChQiTppuoFKHZNgeKEGrT7CgqR5g/eqEmTZg0P8rIEOpjK6AAoWp0rSZIaF7aAYcvVCPPhWbREjh4YX7wXKj3bYFDFyZT34V5g9sWooTtjzNDF3awkQ5cmEf1AtHC88sefgvjRv+rGH9q2EL1wB3uaLpe7I/Hp/8b8uiaQoeYVpulUrHR32GGPEKqzRgDbuKkzVs9DoVLyDfetlw9d0KD3UPcxi3/HXfCeI4A27/d6k4IXdFkqvWLde6E0B2aP+1fjXQoPNQDJx28++lQCJwO0w5WzaEQuO6etz2QBk6PNIBwIXorjQFh/TNd9TkTakTYxTvYwxbG3v8OW11y/2vQwjGFSBRai0IK4Si0FoUUwlFoLQophKPQWhRSCEehtX6BELgjPHyhDvTPYb/D+wVPboU6rjW0DZiY1KowsS7cu30Woweh663UunAF3PaXLUSmXpUtROZ4li18BiYIli1cA6PgsoXIKLhsITKZvGwhct0qWhghay5aCK25aOGr98INMl++aGGFPBQmWviCPBQmWnhEbnKIFkKfx5EsjLwXYs/XShZCp0PRQuwJYslC7EF+yULodChaCJ0OJQvH2NfiBAsz74Xg6yaChfWvAEsXIrcSZQvBT/4JFm6xAWKrY8AmvRcw7cfdv3/EVsLuOP69bxK/AaPcb/cWgK4Dn8WwFYUUwlFoLQophKPQWhRSCEehtSikEI5Ca1FIIRyF1qKQQjgKrUUhhXAUWotCCuEotBaFFMJRaC0KKYSj0FoUUghHobUopBCOQmtRSCEchdaikEI4Cq1FIYVwFFqLQgrhKLQWhRTCUWgtCimE+xVCZFLs7utPmAURNs9Lx/UmTKKgk2/SPlxvQh0G6EQv3daX0BQnITJ3e+f1JVTlSQhNi911PQn1LDwLU2xesE7rSZin78Kw6n877UeoqvAiDIveib0IVRFehWGV97wv9iDUeRV+CMN0pno9aVj/3pNRszS8FYZhWejk3sxTHQfMhDV5a7z0RBfldTHBzSKjbNRfk/oaLzu7/fH9Bd9ZZCH9N718AAAAAElFTkSuQmCC"
-         alt="facebook" width="15" height="15">    <a href="Facebook">Log in with Facebook </a>
-    <h5>Forgot password?</h5>    </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+        <div class="apps">
+            <p>Get the app.</p>
+            <div class="icons">
+                <a href="#"><img src="https://static.cdninstagram.com/rsrc.php/v3/yr/r/fDjwyLC88oO.png"
+                                 alt="googleplay"></a>
+                <a href="#"><img src="https://static.cdninstagram.com/rsrc.php/v3/yv/r/_UbeIRgTpG-.png" alt="microsoft"></a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="sign-up" id="sign-up" style="display: flex">
-    <h3>Don't have an account?</h3>    <a>Sign up</a>
-</div></body>
+<div class="words-in-the-end">
+    <div class="links">
+        <ul>
+            <li><a href="#">Meta</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Top Accounts</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Instagram Lite</a></li>
+            <li><a href="#">Contact Uploading & Non-Users</a></li>
+        </ul>
+    </div>
+    <select class="language">
+        <option>Russian</option>
+        <option selected>English</option>
+        <option>English(UK)</option>
+        <option>Spain</option>
+        <option>Kazakh</option>
+        <option>Japan</option>
+        <option>Korean</option>
+        <option>Italian</option>
+        <option>Turkish</option>
+        <option>Chain</option>
+        <option>Paris</option>
+        <option>German</option>
+    </select>
+    <div id="copyright">
+        © 2023 Instagram from Meta
+    </div>
+</div>
+
+</body>
 </html>
