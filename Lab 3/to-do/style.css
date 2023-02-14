@@ -1,0 +1,119 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.upper-banner{
+    background-color: black;
+    color: grey;
+    width: 100vw;
+    font-size: small;
+    height: 20px;
+    position: absolute;
+}
+
+.main-container{
+    justify-content: center;
+    top: 20px;
+    position: relative;
+    min-width: 600px;
+    top: 10%;
+}
+
+.main-container h2{
+    width: 100%;
+    font-size: 70px;
+}
+
+.main-container input{
+    width: 75%;
+    height: 30px;
+}
+
+button{
+    width: 20%;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.task-adder {
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.task-adder input:focus {
+    outline: none;
+    border-color: black;
+}
+
+button:hover {
+    background: honeydew;
+}
+
+#del{
+    background-color: #03a9f4;
+    color: #ffffff;
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    float: right;
+    padding: 0 15px;
+}
+#del:hover {
+    background: #0083bf;
+}
+li{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    position: relative;
+    top: 5px;
+    width: 100%;
+    margin: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+    padding-top: 2px;
+}
+
+.checkbox{
+    margin-top: 10px;
+    margin-right: 100px;
+    background-color: #03a9f4;
+    color: #ffffff;
+    height: 100%;
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    bottom: 5px;
+}
+
+.par{
+    max-width: 750px;
+    width: 100%;
+}
+.lined p{
+    text-decoration: line-through;
+}
+
+p{
+    font-size: 20px;
+}
