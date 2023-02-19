@@ -29,7 +29,9 @@
   }
   
   h2 {
-    font-size: 20px;
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   
   h1, h2 {
@@ -93,18 +95,6 @@
     cursor: auto;
   }
   
-  /* Fancy Button */
-  
-  .fancy-button {
-    background-color: white;
-    color: #1976d2;
-  }
-  
-  .fancy-button i.material-icons {
-    color: #1976d2;
-    padding-right: 4px;
-  }
-  
   /* Top Bar */
   
   app-top-bar {
@@ -122,18 +112,6 @@
     color: white;
     margin: 0;
   }
-  
-  /* Checkout Cart, Shipping Prices */
-  
-  .cart-item, .shipping-item {
-    width: 100%;
-    min-width: 400px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px 32px;
-    margin-bottom: 8px;
-    border-radius: 2px;
-    background-color: #EEEEEE;
-  }
+.container{
+  width: 100vw;
+}
