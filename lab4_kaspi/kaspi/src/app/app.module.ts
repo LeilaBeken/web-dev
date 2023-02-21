@@ -7,11 +7,13 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { ProductComponent } from './product/product.component';
     ShareIconsModule,
     RouterModule.forRoot([
       { path: '', component: ProductComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
     ])
   ],
   providers: [],

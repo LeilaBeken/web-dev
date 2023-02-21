@@ -5,14 +5,7 @@
         <img src={{product.image}}>
     </div>
     <div class="right">
-        <h3><a href={{product.link}}>{{product.name}}</a></h3>
-        <p>{{ product.description }}</p>
+        <h3><a [routerLink]="['/products', product.id]">{{product.name}}</a></h3>
         <p class="rating">Rating: {{product.rating}}</p>
-        <share-buttons theme="circles-dark"
-            [include]="['copy', 'telegram','whatsapp']"
-            [showIcon]="true"
-            [showText]="false"
-            url={{product.link}}>
-        </share-buttons>
     </div>
 </div>
