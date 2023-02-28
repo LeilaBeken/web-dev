@@ -11,11 +11,13 @@ export class ProductListComponent {
   selectedCategory = '';
     filteredProducts = this.products;
 
-    onCategoryChange() {
-        if (this.selectedCategory) {
-            this.filteredProducts = this.products.filter(product => product.category === this.selectedCategory);
-        } else {
-            this.filteredProducts = this.products;
-        }
-    }
+    onCategoryChange(event: any) {
+      this.selectedCategory = event.target.value;
+      if (this.selectedCategory) {
+          this.filteredProducts = this.products.filter(product => product.category === this.selectedCategory);
+      } else {
+          this.filteredProducts = this.products;
+      }
+  }
+  
 }
