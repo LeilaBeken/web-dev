@@ -25,7 +25,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
     ShareIconsModule,
     FormsModule,  
     RouterModule.forRoot([
-       {path: '', component: AppComponent},
+      {path: '', component: AppComponent},
       { path: 'products', component: ProductListComponent },
       { path: 'products/:productId', component: ProductItemComponent },
     ])

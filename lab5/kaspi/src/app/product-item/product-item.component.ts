@@ -17,4 +17,7 @@ export class ProductItemComponent implements OnInit{
     const productIdFromRoute = Number(routeParams.get('productId'));
     this.product = products.find(product => product.id == productIdFromRoute);
   }
+  pressLike(product: Product){ 
+    product.likes++;
+  }
 }

@@ -14,5 +14,8 @@
             [showText]="false"
             url={{product.link}}>
         </share-buttons>
+
+        <button class="like" (click)="pressLike(product)">Like</button>
+        <p>{{product.likes}}</p>
     </div>
 </div>
