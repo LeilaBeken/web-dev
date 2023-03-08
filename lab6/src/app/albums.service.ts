@@ -13,7 +13,13 @@ export class AlbumsService {
   getPhotos(): Observable<Photos[]>{
     return this.client.get<Photos[]>('https://jsonplaceholder.typicode.com/albums/1/photos');
   }
-  getPhoto(id: number, title: string): Observable<Photos> {
+  getPhoto(id: number): Observable<Photos> {
     return this.client.get<Photos>(`https://jsonplaceholder.typicode.com/albums/1/photos/${id}`);
+  }
+  addPhoto(photo: Photos): Observable<Photos> {
+    return this.client.post<Photos>(`https://jsonplaceholder.typicode.com/albums/1/photos`, photo);
+  }
+  deletePhoto(id: number): Observable<any> {
+    return this.client.delete(`https://jsonplaceholder.typicode.com/albums/1/photos/${id}`);
   }
 }
