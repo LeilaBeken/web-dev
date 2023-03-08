@@ -1,6 +1,6 @@
-import {Post, Photos} from "./models";
+import {Album, Photos} from "./models";
 
-export const POSTS: Post[] = [
+export const POSTS: Album[] = [
     {
       "userId": 1,
       "id": 1,

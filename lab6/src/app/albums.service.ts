@@ -1,25 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Photos } from './models';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-
+import {Observable, of} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Album} from './models';
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumsService {
+  BASE_URL = 'https://jsonplaceholder.typicode.com';
 
   constructor(private client: HttpClient) { }
+  getAlbums(): Observable<Album[]> {
+    return this.client.get<Album[]>(`${this.BASE_URL}/albums`);
+  }
 
-  getPhotos(): Observable<Photos[]>{
-    return this.client.get<Photos[]>('https://jsonplaceholder.typicode.com/albums/1/photos');
+  getAlbum(id: number): Observable<Album> {
+    return this.client.get<Album>(`${this.BASE_URL}/albums/${id}`);
   }
-  getPhoto(id: number): Observable<Photos> {
-    return this.client.get<Photos>(`https://jsonplaceholder.typicode.com/albums/1/photos/${id}`);
+
+  addAlbum(album: Album): Observable<Album> {
+    return this.client.post<Album>(`${this.BASE_URL}/albums`, album);
   }
-  addPhoto(photo: Photos): Observable<Photos> {
-    return this.client.post<Photos>(`https://jsonplaceholder.typicode.com/albums/1/photos`, photo);
+
+  updateAlbum(album: Album): Observable<Album> {
+    return this.client.put<Album>(`${this.BASE_URL}/albums/${album.id}`, album);
   }
-  deletePhoto(id: number): Observable<any> {
-    return this.client.delete(`https://jsonplaceholder.typicode.com/albums/1/photos/${id}`);
+
+  deleteAlbum(id: number): Observable<any> {
+    return this.client.delete(`${this.BASE_URL}/albums/${id}`);
+  }
+  getAlbumPhotos(id: number): Observable<any> {
+    return this.client.get(`${this.BASE_URL}/albums/${id}/photos`)
   }
 }

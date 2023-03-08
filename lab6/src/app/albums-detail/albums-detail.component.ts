@@ -1,10 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Album, Photos} from '../models';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+import {AlbumsService} from '../albums.service';
 
 @Component({
   selector: 'app-albums-detail',
   templateUrl: './albums-detail.component.html',
   styleUrls: ['./albums-detail.component.css']
 })
-export class AlbumsDetailComponent {
+export class AlbumsDetailComponent implements OnInit {
+  // @ts-ignore
+  album: Album;
+  // @ts-ignore
+  loaded: boolean;
+  photos: Photos[];
+  // @ts-ignore
+  name: string;
+  constructor(private route: ActivatedRoute,
+              private location: Location,
+              private albumService: AlbumsService) {
+    this.photos = [];
+  }
 
+  ngOnInit(): void {
+    this.getAlbum();
+  }
+
+  getAlbum(): void {
+    this.route.paramMap.subscribe((params) => {
+      // @ts-ignore
+      const id = +params.get('id');
+      this.loaded = false;
+      this.albumService.getAlbum(id).subscribe((album) => {
+        this.album = album;
+        this.loaded = true;
+      });
+    });
+  }
+
+  updateAlbum(): void {
+    this.loaded = false;
+    this.albumService.updateAlbum(this.album).subscribe((album) => {
+      console.log(album);
+      this.album.title = this.name;
+      this.loaded = true;
+    });
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
