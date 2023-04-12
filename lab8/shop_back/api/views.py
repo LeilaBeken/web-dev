@@ -15,7 +15,7 @@ def product_detail(request, id):
         product = Product.objects.get(id=id)
     except Product.DoesNotExist as e:
         raise Http404("Product does not exis")
-    return render(request, 'product_detail.html', {'product':product})
+    return render(request, 'product_details.html', {'product':product})
     # return JsonResponse(product.to_json())
 
 def categories_list(request):
